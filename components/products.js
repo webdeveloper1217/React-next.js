@@ -8,6 +8,8 @@ import offlineProducts from '../db/offlineData/products';
 export default function Products({ category }) {
   const sortQueryResult = useQuery(SORT_PRODUCT_SECTION);
 
+  console.log(category);
+
   if (category) {
     var { data, loading, error } = useQuery(PRODUCTS, {
       variables: {
